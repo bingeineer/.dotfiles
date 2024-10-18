@@ -129,12 +129,12 @@ export STOW_FOLDERS="bin,i3,nvim,tmux,zsh"
 export GIT_EDITOR=nvim
 export GOPATH=$HOME/gocode
 
+addToPathFront /opt/nvim-linux64/bin
 addToPathFront $HOME/.cargo/env
 addToPathFront $HOME/.rbenv/bin
 addToPathFront $HOME/.local/bin
 addToPathFront /usr/local/go/bin
 addToPathFront /usr/local/bin
-addToPathFront /opt/homebrew/opt/postgresql@12/bin
 addToPathFront $GOPATH/bin
 
 pys() {
@@ -160,5 +160,6 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+# MacOS
+# export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 eval "$(rbenv init -)"
